@@ -1,0 +1,36 @@
+import java.util.Scanner;
+import java.util.Random;
+public class Number_gussing {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        Random rc=new Random();
+        int number;
+        int random;
+        int point=0;
+        random=rc.nextInt(100);
+        System.out.println("random number is" +random);
+
+        do {
+            System.out.println("Enter number");
+            number=sc.nextInt();
+
+            if(number<random)
+            {
+                System.out.println("enter larger value");
+            }
+            else
+            {
+                System.out.println("enter small value");
+            }
+            ++point;
+
+        }while(number!=random);
+        System.out.println("Numbers are Matched");
+
+        System.out.println("NUmber of attempts are :" +point);
+
+
+
+    }
+}
